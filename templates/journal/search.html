@@ -1,0 +1,39 @@
+{% extends "core/base.html" %}
+{% load static %}
+{% load i18n %}
+
+
+{% block title %}{% trans "Search" %}{% endblock %}
+
+{% block css %}
+{% endblock %}
+
+{% block body %}
+
+    <section id="content">
+        <div class="row">
+            <div class="large-8 columns border-right">
+                <h4>{% trans "Articles" %}</h4>
+                {% for article in articles %}
+                {% include "elements/journal/box_article.html" with article=article %}
+                {% endfor %}
+
+            </div>
+            <aside class="large-4 columns" data-sticky-container>
+                <div class="sticky" data-sticky data-margin-top="0" data-sticky data-anchor="content">
+                    <form method="POST">
+                        {% csrf_token %}
+                        <div class="section">
+
+                        </div>
+                        <div class="section">
+                            <button type="submit" class="button">{% trans "Filter" %}</button>
+                        </div>
+                    </form>
+                </div>
+            </aside>
+        </div>
+
+    </section>
+
+{% endblock body %}
