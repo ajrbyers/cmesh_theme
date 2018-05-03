@@ -40,6 +40,7 @@
 //  35. Top Bar
 
 @import 'util/util';
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
 
 // 1. Global
 // ---------
@@ -48,13 +49,13 @@ $global-font-size: 90%;
 $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
 $light-gray: #F1F1F1;
-$medium-gray: #ECECEC;
-$dark-gray: #8a8a8a;
-$black: #0a0a0a;
-$white: #fefefe;
+$medium-gray: #E0E0E0;
+$dark-gray: #666;
+$black: Black;
+$white: #FFF;
 $body-background: $white;
 $body-font-color: $black;
-$body-font-family: 'Merriweather', serif;
+$body-font-family: 'Open Sans', Helvetica, sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
@@ -64,11 +65,11 @@ $global-radius: 0;
 $global-text-direction: ltr;
 
 $foundation-palette: (
-  primary: #6782AC,
-  secondary: #94997B,
-  success: #3adb76,
+  primary: #e0e0e0,
+  secondary: #b00,
+  success: #085,
   warning: #ffae00,
-  alert: #ec5840,
+  alert: #b00,
 ) !default;
 
 @include add-foundation-colors;
@@ -100,7 +101,7 @@ $block-grid-max: 8;
 // 4. Base Typography
 // ------------------
 
-$header-font-family: 'Proxima Nova', Montserrat, Helvetica, Roboto, Arial, sans-serif;
+$header-font-family: 'Open Sans', 'Proxima Nova', Montserrat, Helvetica, Roboto, Arial, sans-serif;
 $header-font-weight: $global-weight-normal;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
@@ -236,7 +237,7 @@ $button-margin: 0 0 $global-margin 0;
 $button-fill: solid;
 $button-background: $primary-color;
 $button-background-hover: scale-color($button-background, $lightness: -15%);
-$button-color: #fff;
+$button-color: #e5e5e5;
 $button-color-alt: #000;
 $button-radius: $global-radius;
 $button-sizes: (

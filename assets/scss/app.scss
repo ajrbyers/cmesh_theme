@@ -5,6 +5,8 @@
 
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css);
 
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+
 @import 'foundation';
 
 @import "variables";
@@ -169,7 +171,7 @@ header {
     p {
       font-size: rem-calc(12px);
       color: $primary-color;
-      font-family: $header-font-family;
+      font-family: 'Open Sans';
     }
   }
   #main-menu {
@@ -260,7 +262,7 @@ header {
 .uppercase {
   text-transform: uppercase;
   letter-spacing: .1em;
-  font-family: $header-font-family;
+  font-family: 'Open Sans';
 }
 
 .white-text {
@@ -677,7 +679,7 @@ footer {
     padding-bottom: rem-calc(20px);
   }
   p {
-    font-family: $header-font-family;
+    font-family: 'Open Sans';
     font-size: rem-calc(12px);
     color: #333;
     margin: 0;
@@ -696,7 +698,7 @@ footer {
     li a {
       @extend .uppercase;
       font-weight: bold;
-      font-family: $header-font-family;
+      font-family: 'Open Sans';
       font-size: rem-calc(12px);
       color: #333;
     }
