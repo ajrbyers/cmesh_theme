@@ -171,7 +171,7 @@ header {
     p {
       font-size: rem-calc(12px);
       color: $primary-color;
-      font-family: 'Open Sans';
+      font-family: $header-font-family;
     }
   }
   #main-menu {
@@ -188,7 +188,7 @@ header {
       text-align: justify;
 
       a {
-        font-weight: 300;
+        font-weight: 400;
         color: $menu-foreground-color;
         font-size: rem-calc(14px);
       }
@@ -196,6 +196,7 @@ header {
       a.button {
         background-color: $menu-alternative-background-color;
         color: $menu-foreground-color;
+        border: 1px solid transparent;
       }
     }
   }
@@ -262,7 +263,7 @@ header {
 .uppercase {
   text-transform: uppercase;
   letter-spacing: .1em;
-  font-family: 'Open Sans';
+  font-family: $header-font-family;
 }
 
 .white-text {
@@ -311,7 +312,7 @@ header {
     }
 
     .uppercase {
-      font-weight: 300;
+      font-weight: 400;
     }
 
     @include breakpoint(small only) {
@@ -413,7 +414,7 @@ main section {
 }
 
 .button.success {
-  background-color: $primary-dark-color;
+  background-color: $primary-color;
 }
 
 h3 small {
@@ -448,13 +449,13 @@ div.caption span.label {
   position: relative;
 
   .button {
-    background-color: $primary-dark-color;
-    color: #FFF;
+    background-color: $primary-color;
+    color: $black;
   }
 
   .button:hover {
-    background-color: $very-dark-primary-color;
-    color: #FFF;
+    background-color: #FFF;
+    color: #b00;
   }
 
 
@@ -584,9 +585,11 @@ div.caption span.label {
     li {
       a {
         color: $dark-gray;
+        border: 0;
       }
       &:hover {
         background: $medium-gray;
+        border: 0;
       }
       i {
         margin-top: rem-calc(-5px);
@@ -679,7 +682,7 @@ footer {
     padding-bottom: rem-calc(20px);
   }
   p {
-    font-family: 'Open Sans';
+    font-family: $header-font-family;
     font-size: rem-calc(12px);
     color: #333;
     margin: 0;
@@ -698,7 +701,7 @@ footer {
     li a {
       @extend .uppercase;
       font-weight: bold;
-      font-family: 'Open Sans';
+      font-family: $header-font-family;
       font-size: rem-calc(12px);
       color: #333;
     }

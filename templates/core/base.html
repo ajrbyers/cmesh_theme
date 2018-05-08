@@ -37,9 +37,9 @@
             <div class="top-bar-left border-right">
                 {% if request.journal %}
                     {% if request.journal.header_image %}
-                        <a href="/"><img src="{{ request.journal.header_image.url }}" class="header-image"></a>
+                        <a href="/CMSH/"><img src="{{ request.journal.header_image.url }}" class="header-image"></a>
                     {% else %}
-                        <a href="/"><img src="{% static "common/img/sample/janeway.png" %}"></a>
+                        <a href="/CMSH/"><img src="{% static "common/img/sample/janeway.png" %}"></a>
                     {% endif %}
                 {% else %}
                     <a href="/">{% svg request.press_cover %}</a>
@@ -67,7 +67,7 @@
                             {% csrf_token %}
                             <div class="input-group">
                                 <span class="input-group-label"><i class="fa fa-search"></i></span>
-                                <input class="input-group-field" type="search" name="search">
+                                <input class="input-group-field" type="search" placeholder="Search CMESH" name="search">
 
                             </div><input type="submit" style="visibility: hidden;" />
                         </form>

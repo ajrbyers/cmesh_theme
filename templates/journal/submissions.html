@@ -31,7 +31,8 @@
                 </div>
                 <hr />
                 <h5>{% trans 'About' %} {{ request.journal.name }}</h5>
-                {{ journal_settings.general.journal_description|safe }}
+                <!--{{ journal_settings.general.journal_description|safe }}-->
+                {{ request.journal.description }}
                 <hr />
                 <h5>{% trans 'Focus and Scope for' %} {{ request.journal.name }}</h5>
                 {{ journal_settings.general.focus_and_scope|safe }}

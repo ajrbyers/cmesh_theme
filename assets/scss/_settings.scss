@@ -51,7 +51,7 @@ $global-lineheight: 1.5;
 $light-gray: #F1F1F1;
 $medium-gray: #E0E0E0;
 $dark-gray: #666;
-$black: Black;
+$black: #000;
 $white: #FFF;
 $body-background: $white;
 $body-font-color: $black;
@@ -59,9 +59,9 @@ $body-font-family: 'Open Sans', Helvetica, sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
-$global-weight-normal: 300;
+$global-weight-normal: 400;
 $global-weight-bold: bold;
-$global-radius: 0;
+$global-radius: 4px;
 $global-text-direction: ltr;
 
 $foundation-palette: (
@@ -236,9 +236,9 @@ $button-padding: 0.85em 1em;
 $button-margin: 0 0 $global-margin 0;
 $button-fill: solid;
 $button-background: $primary-color;
-$button-background-hover: scale-color($button-background, $lightness: -15%);
-$button-color: #e5e5e5;
-$button-color-alt: #000;
+$button-background-hover: #FFF;
+$button-color: #000;
+$button-color-alt: #b00;
 $button-radius: $global-radius;
 $button-sizes: (
   tiny: 0.6rem,
@@ -278,7 +278,7 @@ $closebutton-offset-vertical: 0.5rem;
 $closebutton-size: 2em;
 $closebutton-lineheight: 1;
 $closebutton-color: $dark-gray;
-$closebutton-color-hover: $black;
+$closebutton-color-hover: #b00;
 
 // 15. Drilldown
 // -------------

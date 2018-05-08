@@ -14,7 +14,7 @@
 		<div class="row column">
             <div class="large-4 columns contact">
                 {% if request.journal %}
-                <h4>{% trans "Journal Representatives" %}</h4>
+                <h4>{% trans "Editorial Board" %}</h4>
                 {% else %}
                 <h4>{% trans "Press Representatives" %}</h4>
                 {% endif %}
@@ -36,7 +36,9 @@
                     {{ contact_form.subject|foundation }}
                     {{ contact_form.body|foundation }}
                     {{ contact_form.are_you_a_robot|foundation }}
-                    <button type="submit" class="success button">{% trans "Send Message" %}</button>
+                <div class="button-group">
+                    <button type="submit" class="button">{% trans "Send Message" %}</button>
+                </div>                
                 </form>
             </div>
 

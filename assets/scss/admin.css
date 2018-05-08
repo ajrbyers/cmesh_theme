@@ -11,7 +11,7 @@ nav.sidebar {
   top: 0px;
   left: 0px;
   height: 100%;
-  background: none repeat scroll 0 0 #47515B;
+  background: none repeat scroll 0 0 #666;
   color: white;
   padding: 20px 10px; }
   nav.sidebar a#justify-icon {
@@ -42,7 +42,7 @@ nav.sidebar {
         text-decoration: none;
         font-size: 20px; }
         nav.sidebar ul li a.expandable:hover {
-          color: #bbbbbb; }
+          color: #e0e0e0; }
         nav.sidebar ul li a.expandable span.expanded-element {
           margin-left: 2px;
           display: none;
@@ -68,23 +68,23 @@ nav.sidebar {
 }
 
 .summary-border {
-  border-bottom: 2px solid #2e6da4;
+  border-bottom: 2px solid #067;
 }
 
 .review-border {
-  border-bottom: 2px solid #d43f3a;
+  border-bottom: 2px solid #b00;
 }
 
 .editing-border {
-  border-bottom: 2px solid #eea236;
+  border-bottom: 2px solid #a60;
 }
 
 .production-border {
-  border-bottom: 2px solid #4cae4c;
+  border-bottom: 2px solid #085;
 }
 
 .info-border {
-  border-bottom: 2px solid #46b8da;
+  border-bottom: 2px solid #067;
 }
 
 .article-title {
@@ -174,38 +174,38 @@ nav.sidebar {
     margin-top: -5px;
 }
 .bs-callout-default {
-    border-left-color: #777;
+    border-left-color: #666;
 }
 .bs-callout-default h4 {
-    color: #777;
+    color: #666;
 }
 .bs-callout-primary {
-    border-left-color: #428bca;
+    border-left-color: #067;
 }
 .bs-callout-primary h4 {
-    color: #428bca;
+    color: #067;
 }
 .bs-callout-success {
-    border-left-color: #5cb85c;
+    border-left-color: #085;
 }
 .bs-callout-success h4 {
-    color: #5cb85c;
+    color: #085;
 }
 .bs-callout-danger {
-    border-left-color: #d9534f;
+    border-left-color: #b00;
 }
 .bs-callout-danger h4 {
-    color: #d9534f;
+    color: #b00;
 }
 .bs-callout-warning {
-    border-left-color: #f0ad4e;
+    border-left-color: #a60;
 }
 .bs-callout-warning h4 {
-    color: #f0ad4e;
+    color: #a60;
 }
 .bs-callout-info {
-    border-left-color: #5bc0de;
+    border-left-color: #067;
 }
 .bs-callout-info h4 {
-    color: #5bc0de;
+    color: #067;
 }

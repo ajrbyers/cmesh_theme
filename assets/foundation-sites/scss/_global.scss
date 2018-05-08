@@ -23,32 +23,32 @@ $global-lineheight: 1.5 !default;
 /// Colors used for buttons, callouts, links, etc. There must always be a color called `primary`.
 /// @type Map
 $foundation-palette: (
-  primary: #2199e8,
-  secondary: #777,
-  success: #3adb76,
+  primary: #e0e0e0,
+  secondary: #b00,
+  success: #085,
   warning: #ffae00,
-  alert: #ec5840,
+  alert: #b00,
 ) !default;
 
 /// Color used for light gray UI items.
 /// @type Color
-$light-gray: #e6e6e6 !default;
+$light-gray: #e5e5e5 !default;
 
 /// Color used for medium gray UI items.
 /// @type Color
-$medium-gray: #cacaca !default;
+$medium-gray: #e0e0e0 !default;
 
 /// Color used for dark gray UI items.
 /// @type Color
-$dark-gray: #8a8a8a !default;
+$dark-gray: #666 !default;
 
 /// Color used for black ui items.
 /// @type Color
-$black: #0a0a0a !default;
+$black: #000 !default;
 
 /// Color used for white ui items.
 /// @type Color
-$white: #fefefe !default;
+$white: #fff !default;
 
 /// Background color of the body.
 /// @type Color
@@ -60,7 +60,7 @@ $body-font-color: $black !default;
 
 /// Font stack of the body.
 /// @type List
-$body-font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif !default;
+$body-font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif !default;
 
 /// Set to `true` to enable antialiased type, using the `-webkit-font-smoothing` and `-moz-osx-font-smoothing` CSS properties.
 /// @type Boolean
@@ -84,7 +84,7 @@ $global-weight-bold: bold !default;
 
 /// Global value used for all elements that have a border radius.
 /// @type Number
-$global-radius: 0 !default;
+$global-radius: 4px !default;
 
 /// Sets the text direction of the CSS. Can be either `ltr` or `rtl`.
 /// @type Keyword
@@ -192,7 +192,7 @@ $-zf-flex-classes-imported: false;
     -moz-appearance: none;
     background: transparent;
     padding: 0;
-    border: 0;
+    border: 2px solid #e0e0e0;
     border-radius: $global-radius;
     line-height: 1;
   }
@@ -219,7 +219,7 @@ $-zf-flex-classes-imported: false;
    */
 
   html {
-    font-family: sans-serif; /* 1 */
+    font-family: 'Open Sans', sans-serif; /* 1 */
     -ms-text-size-adjust: 100%; /* 2 */
     -webkit-text-size-adjust: 100%; /* 2 */
   }
