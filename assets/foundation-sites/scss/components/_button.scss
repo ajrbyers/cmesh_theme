@@ -24,11 +24,11 @@ $button-background: $primary-color !default;
 
 /// Background color on hover for buttons.
 /// @type Color
-$button-background-hover: $white !default;
+$button-background-hover: scale-color($button-background, $lightness: -15%) !default;
 
 /// Font color for buttons.
 /// @type List
-$button-color: $black !default;
+$button-color: $white !default;
 
 /// Font color for buttons, if the background is light.
 /// @type List
@@ -66,7 +66,8 @@ $button-opacity-disabled: 0.25 !default;
   -webkit-appearance: none;
   transition: background-color 0.25s ease-out, color 0.25s ease-out;
   vertical-align: middle;
-  border: 2px solid #e0e0e0;
+  border: 1px solid transparent;
+  border-bottom: 2px solid #000;
   border-radius: $button-radius;
   padding: $button-padding;
   margin: $button-margin;
@@ -111,7 +112,7 @@ $button-opacity-disabled: 0.25 !default;
 
   &:hover, &:focus {
     background-color: $background-hover;
-    color: #b00;
+    color: $white;
   }
 }
 

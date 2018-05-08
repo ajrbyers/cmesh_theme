@@ -449,13 +449,14 @@ div.caption span.label {
   position: relative;
 
   .button {
-    background-color: $primary-color;
-    color: $black;
+    background-color: $primary-dark-color;
+    color: $white;
+    border-bottom: 2px solid $black;
   }
 
   .button:hover {
-    background-color: #FFF;
-    color: #b00;
+    background-color: $very-dark-primary-color;
+    color: $white;
   }
 
 

@@ -23,7 +23,7 @@ $global-lineheight: 1.5 !default;
 /// Colors used for buttons, callouts, links, etc. There must always be a color called `primary`.
 /// @type Map
 $foundation-palette: (
-  primary: #e0e0e0,
+  primary: #666,
   secondary: #b00,
   success: #085,
   warning: #ffae00,
@@ -84,7 +84,7 @@ $global-weight-bold: bold !default;
 
 /// Global value used for all elements that have a border radius.
 /// @type Number
-$global-radius: 4px !default;
+$global-radius: 0px !default;
 
 /// Sets the text direction of the CSS. Can be either `ltr` or `rtl`.
 /// @type Keyword
@@ -192,7 +192,7 @@ $-zf-flex-classes-imported: false;
     -moz-appearance: none;
     background: transparent;
     padding: 0;
-    border: 2px solid #e0e0e0;
+    border-bottom: 2px solid #000;
     border-radius: $global-radius;
     line-height: 1;
   }
