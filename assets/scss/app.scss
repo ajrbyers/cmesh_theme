@@ -180,7 +180,8 @@ header {
     background-color: $menu-background-color;
 
     ul {
-      background-color: $menu-background-color;
+      //background-color: $menu-background-color;
+      background-color: #e0e0e0;
     }
 
     li {
@@ -194,7 +195,8 @@ header {
       }
 
       a.button {
-        background-color: $menu-alternative-background-color;
+        //background-color: $menu-alternative-background-color;
+        background-color: #e0e0e0;
         color: $menu-foreground-color;
         border: 1px solid transparent;
       }
@@ -390,7 +392,8 @@ body, main, #orbiter, #orbitsection {
 
 main section {
   position: relative;
-  padding: rem-calc(100px) 0;
+  //padding: rem-calc(100px) 0;
+  padding: rem-calc(40px) 0;
 
   &.no-padding {
     padding: 0;
