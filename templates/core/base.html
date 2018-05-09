@@ -37,9 +37,9 @@
             <div class="top-bar-left border-right">
                 {% if request.journal %}
                     {% if request.journal.header_image %}
-                        <a href="/CMSH/"><img src="{{ request.journal.header_image.url }}" class="header-image"></a>
+                        <a href="/"><img src="{{ request.journal.header_image.url }}" class="header-image"></a>
                     {% else %}
-                        <a href="/CMSH/"><img src="{% static "common/img/sample/janeway.png" %}"></a>
+                        <a href="/"><img src="{% static "common/img/sample/janeway.png" %}"></a>
                     {% endif %}
                 {% else %}
                     <a href="/">{% svg request.press_cover %}</a>
