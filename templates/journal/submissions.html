@@ -24,7 +24,7 @@
                 <!--<p>{% blocktrans %}This page is designed to help you ensure your submission is ready for and fits the scope of {% endblocktrans %}<i>{{ request.journal.name }}</i>.</p>-->
                 <p>{% blocktrans %}Before you submit an article, you should read over the guidelines below to be sure your article conforms to them. 
                     You must have registered an account and be logged into that account before submitting an article. All articles are commissioned 
-                    before submission. If you have a topic that you think deserves a article, please contact the Editor in Chief, Christopher J. 
+                    before submission. If you have a topic that you think deserves an article, please contact the Editor in Chief, Christopher J. 
                     Phillips, at cmesh@andrew.cmu.edu, and he will respond to your request within a week{% endblocktrans %}.</p>
 
                 <div class="button-group">
@@ -32,10 +32,13 @@
                     <a href="{% url 'core_login' %}" class="button">{% trans 'Login' %}</a>{% else %}
                     <a href="{% url 'submission_start' %}" class="button">{% trans 'Start Submission' %}</a>{% endif %}
                 </div>
+                <!--
                 <hr />
                 <h5>{% trans 'About' %} {{ request.journal.name }}</h5>
                 {{ journal_settings.general.journal_description|safe }}
+                -->
                 <!--{{ request.journal.description }}-->
+                <!--
                 <hr />
                 <h5>{% trans 'Focus and Scope for' %} {{ request.journal.name }}</h5>
                 {{ journal_settings.general.focus_and_scope|safe }}
@@ -102,6 +105,7 @@
                         </div>
                     {% endfor %}
                 {% endif %}
+                    -->
             </div>
 
 		</div>
