@@ -1,6 +1,3 @@
-OLH Theme Repository
+# CMESH Theme Repository
 
-To install:
-
-1. Clone this repository into src/themes/ using the command: git@bitbucket.org:bbkolh/olh-theme.git OLH
-2. Set your theme
+Custom Janeway theme for the Carnegie Mellon Encyclopedia of Science History
