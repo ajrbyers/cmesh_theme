@@ -67,7 +67,6 @@ $button-opacity-disabled: 0.25 !default;
   transition: background-color 0.25s ease-out, color 0.25s ease-out;
   vertical-align: middle;
   border: 1px solid transparent;
-  border-bottom: 2px solid #000;
   border-radius: $button-radius;
   padding: $button-padding;
   margin: $button-margin;
@@ -112,7 +111,7 @@ $button-opacity-disabled: 0.25 !default;
 
   &:hover, &:focus {
     background-color: $background-hover;
-    color: $white;
+    color: $color;
   }
 }
 

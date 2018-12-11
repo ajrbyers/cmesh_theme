@@ -4,10 +4,9 @@
 <section class="dark-primary-bg" style="margin-top: 30px;">
     <div class="row" id="about_journal">
         <div class="large-12 columns">
-            <h2>{{ request.journal.name }}</h2>
+            <h2>{% trans "About this Journal" %}</h2>
             <p>{{ journal_settings.general.journal_description|safe }}</p>
-            <!--<p>{{ request.journal.description }}</p>-->
         </div>
     </div>
-   <!-- <div class="figure">{% svg request.press_cover %}</div>-->
+    <div class="figure">{% svg request.press_cover %}</div>
 </section>

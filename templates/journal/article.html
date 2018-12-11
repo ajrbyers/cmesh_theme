@@ -66,6 +66,7 @@
 {% block body %}
 
     <article>
+    {% if  not journal.disable_article_images %}
         <section class="no-padding meta">
             <div class="orbit article-orbit" role="region" aria-label="Favorite Space Pictures" data-orbit>
                 <ul class="orbit-container article-orbit">
@@ -100,7 +101,7 @@
                                             <span itemprop="worksFor" itemscope
                                                   itemtype="http://schema.org/CollegeOrUniversity"><span
                                                     itemprop="name">({{ author.institution }})</span></span>{% endif %}
-                                            {% if not '@journal.org' in author.author.email %}<a itemprop="email" href="mailto:{{ author.author.email }}"
+                                            {% if not '@journal.org' in author.author.email and author.author.email %}<a itemprop="email" href="mailto:{{ author.author.email }}"
                                                class="fa fa-envelope email-link"></a>{% endif %}</span></span>
                                     {% endfor %}
                                 {% endif %}
@@ -110,6 +111,7 @@
                 </ul>
             </div>
         </section>
+    {% endif %}
         {% for author in article.authors.all %}
             {% if author.biography %}
                 <div class="dropdown-pane author-info" data-dropdown id="author{{ forloop.counter }}" data-hover="true"
@@ -166,16 +168,19 @@
                 <div class="large-8 columns border-right">
                     <div class="row">
                         <div id="article" class="large-10 columns">
+                {% if journal.disable_article_images %}
+                    <small>{{ article.section.name }}</small>
+                    <h3>{{ article.title|safe }}</h5>
+                <hr/>
+                {% endif %}
                             {% if article.abstract != '' %}
                                 <h2>{% trans "Abstract" %}</h2>
                                 <p>{{ article.abstract | safe }}</p>
                             {% endif %}
                             {% if article.keywords.all %}<p><strong>{% trans "Keywords" %}:</strong> {% for keyword in article.keywords.all %}{{ keyword.word }}{% if not forloop.last %}, {% endif %}{% endfor %}</p>{% endif %}
                             {% if article.is_published %}
-                            <!--
                             <p><strong>{% trans "How to Cite" %}:</strong>
-                            {% include "elements/journal/how_to_cite.html" with article=article %}
-                            -->
+                            {% include "elements/journal/how_to_cite.html" with article=article %}</p>
                             {% hook 'article_archive_list' %}
                             {% endif %}
                             {% if article.publisher_notes.all %}
@@ -188,7 +193,6 @@
                                     </ul>
                                 </div>
                             {% endif %}
-
 
                             <div class="summary">
                                 {% if article.is_published %}
@@ -256,6 +260,12 @@
                                 {% for galley in galleys %}
                                     <li>
                                         <a href="{% url 'article_download_galley' article.id galley.id %}">{% trans "Download" %} {{ galley.label }}</a>
+                                        {% if galley.file.mime_type == 'application/pdf' and journal.view_pdf_button %}
+                                            </li>
+                                            <li>
+                                            <a target="_blank" href="{% url 'article_view_galley' article.id galley.id %}">View PDF</a>
+                                            </li>
+                                        {% endif %}
                                     </li>
                                 {% endfor %}
                             </ul>

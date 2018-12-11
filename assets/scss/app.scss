@@ -392,8 +392,7 @@ body, main, #orbiter, #orbitsection {
 
 main section {
   position: relative;
-  //padding: rem-calc(100px) 0;
-  padding: rem-calc(40px) 0;
+  padding: rem-calc(50px) 0;
 
   &.no-padding {
     padding: 0;
@@ -401,7 +400,7 @@ main section {
 }
 
 .dark-primary-bg {
-  background: #247;
+  background: $primary-dark-color;
 
   @extend .white-text;
 }
@@ -417,7 +416,7 @@ main section {
 }
 
 .button.success {
-  background-color: $primary-color;
+  background-color: $primary-dark-color;
 }
 
 h3 small {
@@ -589,11 +588,9 @@ div.caption span.label {
     li {
       a {
         color: $dark-gray;
-        border: 0;
       }
       &:hover {
         background: $medium-gray;
-        border: 0;
       }
       i {
         margin-top: rem-calc(-5px);
@@ -1145,4 +1142,16 @@ button.list-group-item-danger.active:focus {
 
 #reflist p {
   word-wrap: break-word;
+}
+
+.sidebar-item a sup {
+  display: none;
+}
+
+.issue-link {
+    color: inherit;
+}
+
+.issue-link:hover {
+    text-decoration: underline;
 }

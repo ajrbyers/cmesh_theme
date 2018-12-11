@@ -1,28 +1,27 @@
 {% extends "core/base.html" %}
 {% load foundation %}
+{% load i18n %}
 {% load static from staticfiles %}
 
 {% block title %}
     {% if group_id %}
         {{ editorial_groups.0.name }}
     {% else %}
-        Editorial Team
+        {% trans "Editorial Team" %}
     {% endif %}
 {% endblock title %}
 
 {% block body %}
     <section id="content">
         <div class="row column">
-            <!--
             {% if group_id %}
-                <h4>{{ editorial_groups.0.name }}</h4>
+                <h3>{{ editorial_groups.0.name }}</h3>
             {% else %}
-                <h4>Editorial Team</h4>
+                <h3>{% trans "Editorial Team" %}</h3>
             {% endif %}
-            -->
             {% for group in editorial_groups %}
                 {% if not group_id %}
-                    <h5>{{ group.name }}</h5>
+                    <h4>{{ group.name }}</h4>
                 {% endif %}
                 {% if group.description %}<p>{{ group.description|linebreaksbr }}</p>{% endif %}
                 <div class="row" data-equalizer data-equalize-on="medium">
