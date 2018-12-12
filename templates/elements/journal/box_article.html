@@ -21,9 +21,7 @@
             <h2>{{ article.title|safe }}{% if article.is_remote %}&nbsp;<i class="fa fa-external-link small-icon-text"></i>{% endif %}</h2>
            {% include "elements/journal/authors_block.html" %}
             <p><span class="date"><i
-                    class="fa fa-calendar"></i> {{ article.date_published|date:"Y-m-d" }}</span> <i
-                    class="fa fa-book"></i> {% trans "Volume" %} {{ article.issue.volume }},
-                {% trans "Issue" %} {{ article.issue.issue }}</p>
+                    class="fa fa-calendar"></i> {{ article.date_published|date:"Y-m-d" }}</span></p>
         </div>
     </div>
 </div>
